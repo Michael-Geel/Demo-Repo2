@@ -12,3 +12,12 @@ We then use "git remote", "remote" meaning somewhere else not on the local compu
 The full syntax being: "git remote add origin 'repo link'"
 And this provides a link to push the updates to when we push to origin.
 Once this is done, can use "git remote -v" to view all the remote repositories currently connected to.
+
+Is a shortcut for origin master. But need set up what's called an "upstream" meaning that's where I want to push to by defualt.
+To set up an upstream, use this syntax: "git push -u origin master"
+This way, if we're pushing to that location, we can just say "git push" without having to specify where to push to every time.
+
+Take note that in creating this repo, my commits and pushes reflect correctly on github, which implies there's something 
+on the original Demo-Repo that interfered with my information reflecting correctly.
+
+Will do a push and set up an upstream now.
