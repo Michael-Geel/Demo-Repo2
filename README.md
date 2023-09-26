@@ -21,3 +21,22 @@ Take note that in creating this repo, my commits and pushes reflect correctly on
 on the original Demo-Repo that interfered with my information reflecting correctly.
 
 Will do a push and set up an upstream now.
+
+## Git Branching
+
+For future reference: # = Heading in README and ## = Subheading in README
+
+So far in git, we've been on the master branch, in Git, master is a name convention for the main/default branch in a repository.
+If you're just working in one branch, that's where everything will live, all code and commits.
+Called branching as starts to look more like a tree when have multiple branches.
+
+When you first create a new branch (feature branch) the code on the master and feature branch will be exactly the same.
+But as you make updates to the feature branch, those updates will only be seen on the feature branch.
+So when commit changes to a feature branch, if you then change back to the master branch, none of the updates made to the feature branch will reflect.
+Each individual branch has no way of know or tracking what changes and commits are made on other branches, and only tracks the changes and commits made on its own branch.
+In this way, if you were to update the master branch, those changes won't reflect on a feature branch at all.
+This is useful because in time you'll be adding features that'll be either incomplete or break your code, and you don't want to save those changes into the main master branch.
+You want to work on them in a type of sandbox area so you can write all the code you need to and get it into a properly working condition before merging it back into the main master branch of the code base.
+Very helpful when have many people working on a single repository or many different branches going on at once.
+A common finding is that you'll work on a feature branch for a week or more, then you'll find a major bug you have to fix real quick.
+Then you'll make what's called a "hotfix branch" to address the bug you've found, where you fix the root cause of the bug, ensure it's working correctly, and then merge back into the master branch.
