@@ -68,3 +68,10 @@ Looks like no push gets done so will do commit now.
 
 Having done the commit, can observe that all the above notes made in this branch don't show up in the master branch.
 If you do a git checkout to switch to the master branch, all the notes made in this branch disappear.
+When switching back to the master branch, I can merge the 2 branches locally using the "git merge" command.
+Before we do that though, we'll double check what we're merging in using the "git diff" command, referred to as diffing.
+It compares 2 versions of the code and shows all of the lines that have been changed.
+-Roughly shows this in GitHub with the red - lines showing what's been removed and the green + lines showing whats been added.
+When using git diff, you use this syntax: "git diff 'branch name'".
+-Here branch name is the name of the branch you're comparing to the branch you're currently in.
+Will do a fresh commit now, then switch to master branch and run a diff.
