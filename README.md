@@ -161,3 +161,8 @@ This lets get know how we want to handle the conflict.
 Now we need make a commit as we've fixed the merge conflicts.
 
 Will now commit.
+Committed successfully.
+Feature branch is now aligned again with master branch.
+
+## Undoing in Git:
+
