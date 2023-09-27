@@ -132,3 +132,4 @@ In -am, the 'a' stands for add, and 'm' for message.
 --NOTE: this only works for modified files, as a new file would need to be staged in git first.
 
 Will now update the master branch in the index.html file with a similar update to what was made in index.html on the quick-test branch.
+Have made the updates now in the master branch, so will now begin creating the error.
