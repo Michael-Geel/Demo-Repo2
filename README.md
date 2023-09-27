@@ -48,3 +48,20 @@ To create a new branch, we type: "git checkout -b 'branch name'".
 --Can use dashes to lengthen the name of the branch.
 
 Will save these notes and then move into the new branch.
+
+Have now moved into the new branch names "feature-readme-instructions".
+Terminal feeds back upon branch creation that have moved into the new branch.
+Using git branch again shows that we're on the new branch named feature-readme-instructions.
+If we wanted to switch back to the master branch, we'd say "git checkout master"
+-The general syntax for branch switching is "git checkout 'branch name'"
+You can use tab to autocomplete your commands when branch names are getting long to save time.
+
+## New Branch Notes.
+
+This line is just for proof of concept on updating the branch and pushing to git.
+Checking it in git status.
+-Shows modified as per usual.
+So we'll now use git add to stage the changes.
+Functions normally, will have to re-add to stage these notes.
+Will then commit and push accordingly, will first make notes then run the code.
+Looks like no push gets done so will do commit now.
