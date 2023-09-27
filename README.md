@@ -75,3 +75,13 @@ It compares 2 versions of the code and shows all of the lines that have been cha
 When using git diff, you use this syntax: "git diff 'branch name'".
 -Here branch name is the name of the branch you're comparing to the branch you're currently in.
 Will do a fresh commit now, then switch to master branch and run a diff.
+
+Have checked the diff, so when running a diff, what is in the branch you're comparing to the one you're in that isn't in your current branch appears in red, what is in the branch you're in that isn't in the branch you're comparing to, is in green.
+When done, it highlights (END) in white, all you do is press 'q' to exit and return to a new command line.
+
+Could then merge after confirming the diff locally. But what's done more commonly seen pattern is pushing these changes on that branch up to GitHub, then making a PR (pull request? Not sure)
+
+If want to push to GitHub, will ask to tell it what branch to push to, it'll output that there's no upstream branch. By standard, you'll almost always name the branch of GitHub the same as on your local machine. You would then push the new branch and set a remote upstream branch using the following code: "git push --set-upstream origin 'branch name'".
+But here the '--set-upstream' is the same as the '-u' we've previously used. -u is just the shorthand.
+
+Will now commit and push to the new upstream branch.
