@@ -65,3 +65,6 @@ So we'll now use git add to stage the changes.
 Functions normally, will have to re-add to stage these notes.
 Will then commit and push accordingly, will first make notes then run the code.
 Looks like no push gets done so will do commit now.
+
+Having done the commit, can observe that all the above notes made in this branch don't show up in the master branch.
+If you do a git checkout to switch to the master branch, all the notes made in this branch disappear.
