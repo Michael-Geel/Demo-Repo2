@@ -40,3 +40,11 @@ You want to work on them in a type of sandbox area so you can write all the code
 Very helpful when have many people working on a single repository or many different branches going on at once.
 A common finding is that you'll work on a feature branch for a week or more, then you'll find a major bug you have to fix real quick.
 Then you'll make what's called a "hotfix branch" to address the bug you've found, where you fix the root cause of the bug, ensure it's working correctly, and then merge back into the master branch.
+Typing in "git branch" will display all branches currently in the git repository.
+In the branch list, you'll see a star next to one of the branches, and that * indicates which branch I'm currently on.
+We use "git checkout" to switch between branches, but also to create new branches.
+To create a new branch, we type: "git checkout -b 'branch name'".
+-Note that when working on a real application with people, you'd make the name as descriptive as possible.
+--Can use dashes to lengthen the name of the branch.
+
+Will save these notes and then move into the new branch.
