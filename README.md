@@ -107,3 +107,16 @@ Will need to pull them down to local environment, and will need to use a git pul
 Then should see updates on local master branch.
 At this point will still see the branch there, but by convention we don't re-use branches.
 So we can go ahead and delete the branch: "git branch -d 'branch name'"
+
+Have successfully merged and pulled the updates into the master branch, which I'm working on now again.
+Will now delete the feature-readme-instructions branch.
+feature-readme-instructions successfully deleted.
+
+In real life, won't always have such an easy time merging.
+Will come across merge conflicts in git.
+This arises when multiple people are all working on branches of the same master branch and multiple people change the same files.
+So git won't know what code you want to keep, what codes is redundant and what code you'd want to get rid of.
+You'll have to manually do that.
+
+We'll now try this out.
+Create a new branch called "quick-test". Will make the notes on that and merge after this.
