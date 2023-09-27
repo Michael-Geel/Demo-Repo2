@@ -133,3 +133,31 @@ In -am, the 'a' stands for add, and 'm' for message.
 
 Will now update the master branch in the index.html file with a similar update to what was made in index.html on the quick-test branch.
 Have made the updates now in the master branch, so will now begin creating the error.
+The error here is the following: made changes in the master branch, didn't commit them and then attempted to change back to the alternate branch where the master branch changes conflict with the feature branch changes.
+There's a method called stashing where you stash your changes without committing them, but it won't be covered in this tutorial.
+-You stash your changes somewhere and then can retrieve them later, like a temporary holding place.
+
+In this case however, simply ran a git commit on the master document to resolve the error, and be able to switch back to the feature branch.
+Will now run a diff locally with master and then merge.
+Git diff syntax: "git diff master" where master refers to the master branch.
+Git merge syntax: "git merge master" where master refers to the master branch.
+--Note this merges the master branch updates into the feature branch. (Ie from master to feature)
+-Now generally merging locally isn't the regular pattern, and it isn't for merging branches into master.
+-But master gets updated as you go along as you're working on your project, because other people are merging into master and you don't have those changes in your branch.
+-You don't want to get too far behind the master as you're working becaue then it's going to be really difficult to merge later.
+
+So as changes are made to master in the GitHub repo, you're going to want to pull those down to your local master branch.
+Then whatever feature branch you're working off of, you use "git merge master" to keep your feature branch up to date with what's going on in master.
+Will now git merge master.
+Conflict came up: merge conflict in index.html doc
+There are a couple of ways to fix merge conflicts: GitHub provides an interface to fix them.
+You can fix it in the terminal.
+But the easiest way to fix merge conflict is directly in the code.
+Good code editors like VS Code let you choose what action you want to take on the merge conflict using a range of buttons.
+But you can also just directly edit it yourself.
+It also indicates on the error what your current code on the branch is and what the incoming change that it would become is as well.
+In this case we'll delete the additional lines and save both changes.
+This lets get know how we want to handle the conflict.
+Now we need make a commit as we've fixed the merge conflicts.
+
+Will now commit.
