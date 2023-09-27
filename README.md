@@ -120,3 +120,14 @@ You'll have to manually do that.
 
 We'll now try this out.
 Create a new branch called "quick-test". Will make the notes on that and merge after this.
+
+## On quick-test branch
+
+Will add some content to the index.html (including adding the index.html file)
+Do now a git status to check and a git diff to check.
+Can do a shorthand commit in git to skip over the add when you're only modifying files. 
+Instead of -m in your commit, with having done a git add, you use -am in commit.
+In -am, the 'a' stands for add, and 'm' for message.
+-So you add and state a message for the commit.
+--NOTE: this only works for modified files, as a new file would need to be staged in git first.
+
