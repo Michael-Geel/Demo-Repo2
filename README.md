@@ -120,3 +120,79 @@ You'll have to manually do that.
 
 We'll now try this out.
 Create a new branch called "quick-test". Will make the notes on that and merge after this.
+
+## On quick-test branch
+
+Will add some content to the index.html (including adding the index.html file)
+Do now a git status to check and a git diff to check.
+Can do a shorthand commit in git to skip over the add when you're only modifying files. 
+Instead of -m in your commit, with having done a git add, you use -am in commit.
+In -am, the 'a' stands for add, and 'm' for message.
+-So you add and state a message for the commit.
+--NOTE: this only works for modified files, as a new file would need to be staged in git first.
+
+Will now update the master branch in the index.html file with a similar update to what was made in index.html on the quick-test branch.
+Have made the updates now in the master branch, so will now begin creating the error.
+The error here is the following: made changes in the master branch, didn't commit them and then attempted to change back to the alternate branch where the master branch changes conflict with the feature branch changes.
+There's a method called stashing where you stash your changes without committing them, but it won't be covered in this tutorial.
+-You stash your changes somewhere and then can retrieve them later, like a temporary holding place.
+
+In this case however, simply ran a git commit on the master document to resolve the error, and be able to switch back to the feature branch.
+Will now run a diff locally with master and then merge.
+Git diff syntax: "git diff master" where master refers to the master branch.
+Git merge syntax: "git merge master" where master refers to the master branch.
+--Note this merges the master branch updates into the feature branch. (Ie from master to feature)
+-Now generally merging locally isn't the regular pattern, and it isn't for merging branches into master.
+-But master gets updated as you go along as you're working on your project, because other people are merging into master and you don't have those changes in your branch.
+-You don't want to get too far behind the master as you're working becaue then it's going to be really difficult to merge later.
+
+So as changes are made to master in the GitHub repo, you're going to want to pull those down to your local master branch.
+Then whatever feature branch you're working off of, you use "git merge master" to keep your feature branch up to date with what's going on in master.
+Will now git merge master.
+Conflict came up: merge conflict in index.html doc
+There are a couple of ways to fix merge conflicts: GitHub provides an interface to fix them.
+You can fix it in the terminal.
+But the easiest way to fix merge conflict is directly in the code.
+Good code editors like VS Code let you choose what action you want to take on the merge conflict using a range of buttons.
+But you can also just directly edit it yourself.
+It also indicates on the error what your current code on the branch is and what the incoming change that it would become is as well.
+In this case we'll delete the additional lines and save both changes.
+This lets get know how we want to handle the conflict.
+Now we need make a commit as we've fixed the merge conflicts.
+
+Will now commit.
+Committed successfully.
+Feature branch is now aligned again with master branch.
+
+## Undoing in Git:
+
+We are able to undo commits where we've added something to git that we didn't mean to.
+We can undo stages (add) and commits.
+When we run the command: "git add..." we 'stage' files for commit.
+So if we've staged something that we don't actually want to commit or undo, we can run a git reset to undo the stage.
+We can run this command in 2 ways for staging:
+-"git reset" undoes all the files you've staged for commit.
+-"git reset 'file name'" only unstages a specific file that you've named.
+
+But what if we want to undo a commit?
+We use similar syntax with reset: "git reset HEAD~1"
+-Here 'HEAD' is a pointer to the last commit in git.
+The ~1 means that you don't want to look at the immediate last commit, but want it to look at one commit up before that.
+This is how we undo our last commit, we revert back to our second last commit (with the last commit being the erraneous one.)
+Once the command has been run, it will output that changes from the last commit has been unstaged and uncommitted.
+If you were to run a git diff, it would show those erraneous changes as "new" updates now as well.
+
+If you want to see a log of your commits and the changes made in them, you can call "git log"
+-The log of commits is listed in reverse chronological order.
+--Though you can also just look at the time of the commit.
+Each commit in the commit log has a unique hash in git.
+If you want to go back to a specific commit in the log, you can do so using the unique hashes.
+-Syntax for this is: "git reset 'unique hash'"
+-And this'll unstage all changes made after the commit hash referenced.
+Note that the changes will still appear in the files that have been reverted, they just won't be staged or committed in git anymore.
+
+If we want to undo, unstage and completely remove all changes made after a certain commit, we use the syntax:
+- "git reset --hard 'unique has'"
+-Once this is run, HEAD will point at the commit you rolled back to using this command meaning you've completely removed and deleted all changes made after the referenced commit.
+
+Will now push and update all these notes into the master branch and delete this branch.
