@@ -196,3 +196,19 @@ If we want to undo, unstage and completely remove all changes made after a certa
 -Once this is run, HEAD will point at the commit you rolled back to using this command meaning you've completely removed and deleted all changes made after the referenced commit.
 
 Will now push and update all these notes into the master branch and delete this branch.
+
+## Forking
+
+In the GitHub interface, there's a button called "Fork" that allows you to fork a repository.
+What this does is it essentially copies the entire repository into your directory.
+This isn't particularly useful for your own repo's as you already have access to all of your code, but you don't for other people's repositories.
+So if you find a repository where you want to make a PR, make changes to the code and request them to be added, or make a branch, then you'll need to fork the Repository.
+Once forked, there will be a copy of the repository in your GitHub directory and you'll be able to make changes to whatever you want within your forked version of the code.
+Something you'll see in larger repositories (for instance if you fork a large one) especially when working with others on a large project, there'll be multiple branches like the master branch (e.g: Master Staging and dev for different kinds of environments.)
+If you wanted to send your changes back into the original repository that you forked from, you'd then go in GitHub and create a pull request.
+Create pull request -> base repository would then be the original repository you forked from, then the base branch, along with the repository you forked and then the branch to pull the info from.
+You can easily run merges within your fork as well doing this.
+Generally, once you've merged to a default branch (e.g. Master branch) you'd clean up the branch you just merged.
+This means you'd delete it from GitHub and from our local machine, as we're not using that branch anymore.
+It's different when using branches like dev, staging and master.
+Even though you'd normally merge your feature branches into dev or master, sometimes you'd have Staging reserved for merging into dev/master and you never make changes directly on dev and master themselves.
