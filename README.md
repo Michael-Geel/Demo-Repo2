@@ -166,3 +166,33 @@ Feature branch is now aligned again with master branch.
 
 ## Undoing in Git:
 
+We are able to undo commits where we've added something to git that we didn't mean to.
+We can undo stages (add) and commits.
+When we run the command: "git add..." we 'stage' files for commit.
+So if we've staged something that we don't actually want to commit or undo, we can run a git reset to undo the stage.
+We can run this command in 2 ways for staging:
+-"git reset" undoes all the files you've staged for commit.
+-"git reset 'file name'" only unstages a specific file that you've named.
+
+But what if we want to undo a commit?
+We use similar syntax with reset: "git reset HEAD~1"
+-Here 'HEAD' is a pointer to the last commit in git.
+The ~1 means that you don't want to look at the immediate last commit, but want it to look at one commit up before that.
+This is how we undo our last commit, we revert back to our second last commit (with the last commit being the erraneous one.)
+Once the command has been run, it will output that changes from the last commit has been unstaged and uncommitted.
+If you were to run a git diff, it would show those erraneous changes as "new" updates now as well.
+
+If you want to see a log of your commits and the changes made in them, you can call "git log"
+-The log of commits is listed in reverse chronological order.
+--Though you can also just look at the time of the commit.
+Each commit in the commit log has a unique hash in git.
+If you want to go back to a specific commit in the log, you can do so using the unique hashes.
+-Syntax for this is: "git reset 'unique hash'"
+-And this'll unstage all changes made after the commit hash referenced.
+Note that the changes will still appear in the files that have been reverted, they just won't be staged or committed in git anymore.
+
+If we want to undo, unstage and completely remove all changes made after a certain commit, we use the syntax:
+- "git reset --hard 'unique has'"
+-Once this is run, HEAD will point at the commit you rolled back to using this command meaning you've completely removed and deleted all changes made after the referenced commit.
+
+Will now push and update all these notes into the master branch and delete this branch.
